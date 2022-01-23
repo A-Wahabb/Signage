@@ -1,0 +1,46 @@
+$THEME_NAME: 'flat' !default;
+$BORDER_COLOR: #e1e1e1 !default;
+
+$BODY_BG_COLOR: rgb(246, 246, 246) !default;
+$BODY_PADDING: 5px 10px !default;
+
+$TAB_INNER_PADDING: 5px 10px !default;
+$TAB_COLOR: rgba(0,0,0,0.54) !default;
+$TAB_ACTIVE_COLOR: rgb(16,108,200) !default;
+$TAB_FONT_SIZE: 16px !default;
+$TAB_BORDER_COLOR: rgb(255,82,82) !default;
+
+.react-tab-panel--theme-#{$THEME_NAME} {
+  border: 1px solid $BORDER_COLOR;
+
+  .react-tab-panel__body {
+    padding: $BODY_PADDING;
+    background: $BODY_BG_COLOR;
+  }
+}
+
+.react-tab-panel__tab-strip--theme-#{$THEME_NAME} {
+
+  border-bottom: 1px solid $BORDER_COLOR;
+
+  .react-tab-panel__tab-title-inner {
+    padding: $TAB_INNER_PADDING;
+    text-align: center;
+  }
+
+  .react-tab-panel__tab-title {
+    padding: 10px;
+    color: $TAB_COLOR;
+    font-size: $TAB_FONT_SIZE;
+    border-bottom: 2px solid transparent;
+  }
+
+  .react-tab-panel__tab-title--active {
+    color: $TAB_ACTIVE_COLOR;
+    border-bottom-color: $TAB_BORDER_COLOR;
+  }
+
+  .react-tab-panel__tab-title--disabled .react-tab-panel__tab-title-inner {
+    opacity: 0.3;
+  }
+}
