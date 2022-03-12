@@ -25,11 +25,11 @@ export default class renderField extends Component {
 
             <div className="col-12">
 
-            <input  className={` form-control ${ invalid ? '' : 'has-content'}`}   {...input}  type={type}  required/>
+            <input  className={` form-control `}   {...input}  type={type}  required/>
 
 
           </div>
-            <label>{label}</label>
+            <label  className={` ${ invalid ? '' : 'Valued'}`}>{label}</label>
           <div className="help-block">
           {touched && ((error && <span>{error}</span>) || (warning && <span>{warning}</span>))}
           </div>

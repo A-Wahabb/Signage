@@ -706,8 +706,7 @@ toggleRootModal(modalFor, content){
       {this.props.user.config.settings.isGalleryAdvanced && 
       <div className={'menu-holder'}>
         <a href='#' onClick={(e) => this.gotoConsole(event,'PUB-GALLERY')}>
-        <span data-tip={"PUBLIC LIBRARY"} style={{left:'1px'}} className={this.props.common.selectedConsole=="PUB-GALLERY"?"glyphicon glyphicon-picture active-icon":"glyphicon glyphicon-picture"}  ><
-        /span>
+        <span data-tip={"PUBLIC LIBRARY"} style={{left:'1px'}} className={this.props.common.selectedConsole=="PUB-GALLERY"?"glyphicon glyphicon-picture active-icon":"glyphicon glyphicon-picture"}  ></span>
         <div className={this.props.common.selectedConsole=="PUB-GALLERY"?'left-menu-title active':'left-menu-title'}>PUBLIC LIBRARY</div>
         </a>
       </div>

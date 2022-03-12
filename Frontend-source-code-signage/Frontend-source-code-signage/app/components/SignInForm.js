@@ -113,18 +113,18 @@ class SignInForm extends Component {
     var chckInput = { value: false };
     let err = user && user.error;
     return (
-      <div className='card brdr_left card_height p-5'>
+      <div className='card brdr_left card_height p-2 p-md-5'>
         <div className=''>
-          <li className="small-header" role="presentation">
+          <div className="small-header">
             <span className='logo' ></span>
             <div className='d-inline-flex '>
               <h3 className='Bold text_spacing'>SUMMIT </h3> <h3 className='text_spacing'> SIGNAGE</h3>
             </div>
-          </li>
+          </div>
         </div>
         {!this.state.isOptView && <div><Loading isLoading={user.loading} />
           <Error error={err} />
-          <div className='p-5'>
+          <div className='p-2 p-md-5'>
             <form onSubmit={handleSubmit(validateAndSignInUser)} autoComplete="on">
               <div>
                 <Field
@@ -155,6 +155,15 @@ class SignInForm extends Component {
               <div className='signIn_a'>
                 <p>Dont have an account?<a href='' className='ms-2'>Register</a></p>
                 <a href=''>Back to Dashboard</a>
+              </div>
+
+              <div className='my-5 d-md-none'>
+                <div className='text_spacing'>
+                  <h1>Welcome</h1>
+                  <h1>to the</h1>
+                  <h1>SUMMITSIGNAGE</h1>
+                </div>
+                <p className='w-75'>Powerful and professional admin template for web applications, CRM, CMS, Admin Panels and more</p>
               </div>
             </div>
 
