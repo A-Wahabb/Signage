@@ -8,6 +8,7 @@ import {ToastContainer, toast } from 'react-toastify';
 import ForgotPassword from './../pages/ForgotPwd';
 import ResetPassword from './../pages/UserNewPasswordPg';
 import ModalLocal from './modal-local';
+import 'bootstrap/dist/css/bootstrap.css';
 
 class App extends Component {
 	constructor() {

@@ -23,14 +23,13 @@ export default class renderField extends Component {
         return (
           <div className={`form-group ${touched && invalid ? 'has-error' : ''}`}>
 
-            <div className="col-3">
+            <div className="col-12">
 
-            <input  className={`effect-16 ${ invalid ? '' : 'has-content'}`}   {...input}  type={type}  required/>
+            <input  className={` form-control ${ invalid ? '' : 'has-content'}`}   {...input}  type={type}  required/>
 
-            <label>{label}</label>
-            <span className="focus-border"></span>
 
           </div>
+            <label>{label}</label>
           <div className="help-block">
           {touched && ((error && <span>{error}</span>) || (warning && <span>{warning}</span>))}
           </div>

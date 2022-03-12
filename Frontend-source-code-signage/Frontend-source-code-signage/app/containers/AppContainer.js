@@ -1,6 +1,7 @@
 import { connect } from 'react-redux';
 import { meFromToken, meFromTokenSuccess, meFromTokenFailure, resetToken,fetchUserMedia,fetchUserMediaSuccess,fetchUserMediaFailure,fetchSettings, fetchSettingsSuccess,fetchSettingsFailure ,fetchFolders, fetchFoldersSuccess, fetchFoldersFailure } from '../actions/users.js';
 import { changeParentConsole} from '../actions/popup';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 import App from '../components/App.js';
 

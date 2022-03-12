@@ -2,6 +2,8 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import Routes from './routes';
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 //import { AppContainer } from 'react-hot-loader';
 import configureStore from './store/configureStore.js';
 
