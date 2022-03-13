@@ -260,7 +260,7 @@ shouldComponentUpdate(nextProps, nextState) {
       
             return (
               <div className="title-container"><h2 className="header-title">Update Template</h2>
-              <div className="container">
+              <div className="container ">
               <Loading isLoading={newApp.loading || activeApp.loading}/>
               <Error error={error}/>
                 

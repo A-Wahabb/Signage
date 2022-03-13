@@ -55,13 +55,13 @@ class Tabs extends Component {
     ) {
       return (
         <Fragment>
-          <ul className="tabs__labels w-75">
+          <ul className="tabs__labels w-75 p-4">
             {this.props.children.map(labels && labels.bind(this))}
           </ul>
           <div style={{float:'right',color:"#afafaf"}}>
           <span className={"glyphicon glyphicon-filter"} style={{marginTop:"3px"}}></span>
           <select
-            className="btn"
+            className="btn text-white"
             style={{padding:"2px",marginBottom:"3px"}}
             value={
               this.props.defaultFilter ? this.props.defaultFilter : "all"
@@ -78,7 +78,7 @@ class Tabs extends Component {
       );
     } else {
       return (
-        <ul className="tabs__labels">
+        <ul className="tabs__labels p-4">
           {this.props.children.map(labels && labels.bind(this))}
         </ul>
       );
