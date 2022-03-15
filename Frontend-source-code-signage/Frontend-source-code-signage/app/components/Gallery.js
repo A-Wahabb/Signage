@@ -939,7 +939,7 @@ class Gallery extends Component {
       <div className={config.settings.isGalleryAdvanced ? 'adv-contain gallery-container' : 'gallery-container'}>
 
         {selectedConsole !== 'PUB-GALLERY' ? <div className="title-container">
-          <h2 className="header-title">My Libraries</h2>
+          <h2 className="header-title text-nowrap">My Libraries</h2>
           <Search
             changeConsole={this.props.changeConsole}
             onSearchChange={this.onSearchChange}

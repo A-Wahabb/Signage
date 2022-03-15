@@ -19,8 +19,8 @@ class Search extends Component {
 render() {
 
   return (
- <span className={this.props.isOnlysearch?'pop-search':'search-top-input'} >
-      <span className='glyphicon glyphicon-search' ></span>
+ <span className={this.props.isOnlysearch?'pop-search':'search-top-input ms-auto w-100'} >
+      <span className='glyphicon glyphicon-search w-100' ></span>
       {!this.props.isOnlysearch && <span className='search-drop'>
           <Dropdown autoOpen= {true} arrowClassName='glyphicon glyphicon-triangle-bottom' className={'glyphicon glyphicon-triangle-bottom'}>
       <Dropdown.Toggle title="" />
@@ -47,7 +47,7 @@ render() {
         </Dropdown></span>}
           <input 
             type='search' 
-            className='search' 
+            className='search ms-auto' 
             placeholder="search..." 
             onChange={(e)=> this.props.onSearchChange(e)}/>
 
