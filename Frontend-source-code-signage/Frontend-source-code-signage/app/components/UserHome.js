@@ -706,7 +706,7 @@ class UserHome extends Component {
     return (
       <div className='row p-4'>
         <div className="col-sm-12 col-md-6 col-lg-4 summary-wdgt">
-          <div className="card bg-primary">
+          <div className="card bg-primary box_shadow">
             <h4>Screens</h4>
             <section>
               <Charts
@@ -724,7 +724,7 @@ class UserHome extends Component {
           </div></div>
 
         <div className="col-sm-12 col-md-6 col-lg-4 summary-wdgt">
-          <div className="card bg-warning">
+          <div className="card bg-warning box_shadow">
             <h4>Online Screens By Date</h4>
             <section>
               <Charts data={this.state.vardata}
@@ -739,7 +739,7 @@ class UserHome extends Component {
         </div>
 
         <div className="col-sm-12 col-md-6 col-lg-4 summary-wdgt">
-          <div className="card bg-grn ">
+          <div className="card bg-grn box_shadow">
             <h4>Storage Usage </h4>
             <section>
               <ComplexDonut
