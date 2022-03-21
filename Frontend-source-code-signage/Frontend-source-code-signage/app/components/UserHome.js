@@ -704,72 +704,72 @@ class UserHome extends Component {
     console.log('colors---', this.state.colors);
     // style={{ display: 'inline-block', width: '100%' }}
     return (
-      <div className='row p-4'>
-        <div className="col-sm-12 col-md-6 col-lg-4 summary-wdgt">
-          <div className="card bg-primary box_shadow">
-            <h4>Screens</h4>
-            <section>
-              <Charts
-                data={this.state.data}
-                labels={this.state.screensChartLbl}
-                colors={this.state.colors}
-                horizontal={true}
-              />
+        <div className='row p-4'>
+          <div className="col-sm-12 col-md-6 col-lg-4 summary-wdgt">
+            <div className="card bg-primary p-2 h-100 d-flex align-items-stretch box_shadow">
+              <h4>Screens</h4>
+              <section>
+                <Charts
+                  data={this.state.data}
+                  labels={this.state.screensChartLbl}
+                  colors={this.state.colors}
+                  horizontal={true}
+                />
 
-              <Legend
-                key={this.state.screensChartLbl}
-                labels={this.state.screensChartLbl}
-                colors={this.state.colors} />
-            </section>
-          </div></div>
+                <Legend
+                  key={this.state.screensChartLbl}
+                  labels={this.state.screensChartLbl}
+                  colors={this.state.colors} />
+              </section>
+            </div></div>
 
-        <div className="col-sm-12 col-md-6 col-lg-4 summary-wdgt">
-          <div className="card bg-warning box_shadow">
-            <h4>Online Screens By Date</h4>
-            <section>
-              <Charts data={this.state.vardata}
-                labels={this.state.historyLbl}
-                colors={this.state.verColors} height={90} />
-              <Legend
-                labels={this.state.historyLbl}
-                colors={this.state.colors}
-              />
-            </section>
+          <div className="col-sm-12 col-md-6 col-lg-4 summary-wdgt">
+            <div className="card bg-warning overflow-hidden p-2 h-100 d-flex align-items-stretch box_shadow">
+              <h4>Online Screens By Date</h4>
+              <section>
+                <Charts data={this.state.vardata}
+                  labels={this.state.historyLbl}
+                  colors={this.state.verColors} height={130} />
+                <Legend
+                  labels={this.state.historyLbl}
+                  colors={this.state.colors}
+                />
+              </section>
+            </div>
+          </div>
+
+          <div className="col-sm-12 col-md-6 col-lg-4 summary-wdgt">
+            <div className="card bg-grn p-2 h-100 d-flex align-items-stretch box_shadow">
+              <h4>Storage Usage </h4>
+              <section>
+                <ComplexDonut
+                  size={130}
+                  radius={40}
+                  segments={[
+                    {
+                      color: this.state.colors[2],
+                      value: parseInt(this.props.mediaUploadedSize) ? parseInt(this.props.mediaUploadedSize) : 1
+                    },
+                    {
+                      color: this.state.colors[0],
+                      value: 30
+                    },
+                    {
+                      color: this.state.colors[1],
+                      value: 50
+                    }
+                  ]}
+                  thickness={40}
+                  startAngle={-110}
+                />
+                <Legend
+                  labels={['Library', 'Contents', 'Available']}
+                  colors={[this.state.colors[2], this.state.colors[0], this.state.colors[1]]}
+                />
+              </section>
+            </div>
           </div>
         </div>
-
-        <div className="col-sm-12 col-md-6 col-lg-4 summary-wdgt">
-          <div className="card bg-grn box_shadow">
-            <h4>Storage Usage </h4>
-            <section>
-              <ComplexDonut
-                size={120}
-                radius={40}
-                segments={[
-                  {
-                    color: this.state.colors[2],
-                    value: parseInt(this.props.mediaUploadedSize) ? parseInt(this.props.mediaUploadedSize) : 1
-                  },
-                  {
-                    color: this.state.colors[0],
-                    value: 30
-                  },
-                  {
-                    color: this.state.colors[1],
-                    value: 50
-                  }
-                ]}
-                thickness={40}
-                startAngle={-110}
-              />
-              <Legend
-                labels={['Library', 'Contents', 'Available']}
-                colors={[this.state.colors[2], this.state.colors[0], this.state.colors[1]]}
-              />
-            </section>
-          </div>
-        </div>
-      </div>
     );
   }
 

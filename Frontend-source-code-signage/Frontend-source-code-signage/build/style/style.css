@@ -886,10 +886,16 @@ input[type=file] {
   background-color: #fff;
   background-clip: border-box;
   border: 1px solid #c8ced3;
-  border-radius: .25rem;
+  border-radius: 1rem !important;
   min-height: 150px;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 20px 30px;
   /* padding: 0px 20px; */
   color: #868585 !important;
+  transition: 0.3s ease-in-out;
+}
+
+.summary-wdgt .card:hover {
+  transform: scale(1.04);
 }
 
 .card.bg-primary {
@@ -1319,8 +1325,7 @@ input[type=range] {
   visibility: hidden;
   position: relative;
   z-index: -9999;
-}
-
+} 
 
 .myCheckbox span {
   width: 20px;
@@ -4294,6 +4299,7 @@ select.btn-danger-trans {
   align-items: flex-end;
   padding: 0px 10px 0px 0px;
   width: 100%;
+  height: 130px;
   justify-content: space-between;
 }
 
@@ -4362,7 +4368,7 @@ select.btn-danger-trans {
 }
 
 .Charts.horizontal .Charts--item b {
-  position: absolute;
+  /* position: absolute; */
   right: -24px;
   top: -2px;
 }
@@ -4996,9 +5002,9 @@ select.btn-danger-trans {
     border-radius: 5px;
   }
 
-  .box_shadow{
-  box-shadow: rgba(143, 149, 156, 0.15) 0px 5px 15px 0px;
-}
+  .box_shadow {
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 48px !important;
+  }
 
   .navbar {
 
